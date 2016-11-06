@@ -27,9 +27,7 @@ void draw(){
     fill(0, 0,255);
     noStroke();
     ellipse(width - circlePositionX, circlePositionY, 20, 20);
-    
-    //stroke(255);
-    //line(circlePositionX, circlePositionY, width - circlePositionX, circlePositionY);
   }
+  
   x= x + 1;
 }
