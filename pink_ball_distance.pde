@@ -37,21 +37,8 @@ void draw(){
     cx[i] = cx[i] + sx[i];
     cy[i] = cy[i] + sy[i];
     
-    if (cx[i] > width - p/2){sx[i] = - sx[i];}
-  
-    if (cx[i] < p / 2){sx[i] = - sx[i];}
-  
-    if (cy[i] > height - p / 2){sy[i] = - sy[i];}
-  
-    if (cy[i] < p / 2){sy[i] = - sy[i];}
-    
-    // if (cx[i] > width - p/2 || cx[i] < p / 2){
-    //   sx[i] = - sx[i];
-    // }
-    // if (cy[i] > height - p / 2 || cy[i] < p / 2){
-    //   sy[i] = - sy[i];
-    // } another way to write if condition
-    
+    if (cx[i] > width - p / 2 || cx[i] < p / 2) { sx[i] = - sx[i]; }
+    if (cy[i] > height - p / 2 || cy[i] < p / 2) { sy[i] = - sy[i]; } 
     
     for (int j = 0; j < cx.length; j = j + 1){
       float x2 = cx[j];
@@ -62,6 +49,6 @@ void draw(){
         stroke((d / 100.0) * 255);
         line(x1, y1, x2, y2);
       }  
+    }
   }
-}
 }
