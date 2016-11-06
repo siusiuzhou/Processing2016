@@ -44,12 +44,8 @@ void draw(){
     cx[i] = cx[i] + sx[i];
     cy[i] = cy[i] + sy[i];
     
-    if (cx[i] > width){sx[i] = - sx[i];}
+    if (cx[i] > width - p / 2 || cx[i] < p / 2) { sx[i] = - sx[i]; }
   
-    if (cx[i] < 0){sx[i] = - sx[i];}
-  
-    if (cy[i] > height){sy[i] = - sy[i];}
-  
-    if (cy[i] < 0){sy[i] = - sy[i];}
+    if (cy[i] > height - p / 2 || cy[i] < p / 2) { sy[i] = - sy[i]; }
   }
 }
